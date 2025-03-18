@@ -1,12 +1,12 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, NavLink } from "react-router-dom";
+
 import styled from "styled-components";
-import { toggleTourSelection } from "../store/slices/userSlice"; // Импортируем action
+import { toggleTourSelection } from "../store/slices/userSlice"; 
 
 export default function UserPage() {
   const dispatch = useDispatch();
-  const { selectedTours } = useSelector((state) => state.user); // Получаем избранные туры
+  const { selectedTours } = useSelector((state) => state.user); 
 
   return (
     <UserContainer>

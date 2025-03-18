@@ -4,13 +4,13 @@ import styled from "styled-components";
 import { deleteTourRequest, getAllTour } from "../store/thunks/tourThunk";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import { useNavigate } from "react-router-dom";
-import { toggleTourSelection } from "../store/slices/userSlice"; // Добавили action
+import { toggleTourSelection } from "../store/slices/userSlice"; 
 
 export const TourList = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { tours, loading, error } = useSelector((state) => state.tours);
-  const { selectedTours } = useSelector((state) => state.user); // Получаем сохраненные туры
+  const { selectedTours } = useSelector((state) => state.user); 
 
   useEffect(() => {
     dispatch(getAllTour());
@@ -21,7 +21,7 @@ export const TourList = () => {
   };
 
   const handleCheckboxChange = (tour) => {
-    dispatch(toggleTourSelection(tour)); // Добавляем или убираем тур из user
+    dispatch(toggleTourSelection(tour)); 
   };
 
   return (

@@ -93,7 +93,7 @@ export const TourForm = () => {
 };
 
 const StyledForm = styled.form`
-  position: relative; /* Позволяет абсолютное позиционирование внутри */
+  position: relative; 
   display: flex;
   flex-direction: column;
   gap: 15px;
